@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <main class="container">
+        <h1>Pomodoro Timer</h1>
+        <p class="mode-label">Mode: Focus</p>
+        <p id="timer-display" class="timer-display">25:00</p>
+        <p id="status" class="status-text">状態: 待機中</p>
+        <p class="end-time-text">終了予定: <span id="end-time">--:--</span></p>
+        <div class="actions">
+            <button id="start-button" type="button">開始</button>
+            <button id="pause-button" type="button" disabled>一時停止</button>
+            <button id="resume-button" type="button" disabled>再開</button>
+            <button id="reset-button" type="button" disabled>リセット</button>
+        </div>
+    </main>
+    <script type="module" src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
